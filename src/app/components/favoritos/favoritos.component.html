@@ -1,0 +1,11 @@
+<h1> Mis favoritos </h1>
+
+<div class="row row-cols-1 row-cols-md-5">
+    <div class="col mb-3" *ngFor="let favorito of favoritos">
+
+        <div class="card" (click)="seleccionarImagen(favorito)">
+            <img src="{{ favorito.image.url }}" style="height: 120px; height: 120 px;" class="card-img-top" alt="...">
+        </div>
+
+    </div>
+</div>

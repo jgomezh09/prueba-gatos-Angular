@@ -1,0 +1,64 @@
+<div class="col-lg-9 col-md-9 col-sm-9 ">
+
+    <div class="">
+        <form [formGroup]="formGato" (ngSubmit)="procesarFormGato();" class="">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="">
+                        <label> Nombre </label>
+                        <input formControlName="Nombre" name="Nombre" type="text" placeholder="Nombre" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="">
+                        <label> Raza </label>
+                        <input formControlName="Raza" name="Raza" type="text" placeholder="Raza" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <label> Edad </label>
+                    <input formControlName="Edad" name="Edad" type="text" placeholder="Edad" class="form-control">
+                </div>
+                <div class="col-md-10 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <label> foto </label>
+                            <div class="card">
+                                <img src="{{ urlImagen }}" style="height: 200px; width: 200px;" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2">
+                            <label> . </label>
+                            <button *ngIf="accion" (click)="mostrarFavoritos()" type="button" class="btn btn-outline-info">
+                                Imagen
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="" style="display: none;">
+                        <input formControlName="Foto" name="Foto" type="text" placeholder="Foto" class="form-control">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-12 ">
+                    <br>
+                    <button type="button" (click)="procesarFormGato()" *ngIf="accion" class="btn " style="background-color: black; color: blanchedalmond">
+                            crear
+                        </button>
+
+                    <button type="button" (click)="actualizar()" *ngIf="!accion" class="btn " style="background-color: black; color: blanchedalmond">
+                            Actualizar
+                        </button>
+                    <button *ngIf="accion" type="button" (click)="cancelar()" class="btn btn-danger m-5">
+                            Cancelar
+                    </button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>

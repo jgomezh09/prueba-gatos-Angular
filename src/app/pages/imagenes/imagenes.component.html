@@ -1,0 +1,21 @@
+<div class="container">
+
+    <h1>Imagenes <small>Lindos Gatitos</small></h1>
+
+    <div class="row row-cols-1 row-cols-md-5">
+        <div class="col mb-3" *ngFor="let imagen of imagenes">
+
+            <div class="card">
+                <img src="{{ imagen.url }}" style="height: 250px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Tony</h5>
+                    <p class="card-text"></p> -->
+                    <a href="javascript:void(0);" (click)="agregarFavoritos(imagen)" class="btn btn-primary">agregar a Favorito</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
